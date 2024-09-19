@@ -1,54 +1,211 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>Increment Capital</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMO Ventures</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        html, body {
+            height: 100%;
+            overflow: hidden;
+        }
+        body {
+            background-color: #f0f4f8;
+            display: flex;
+            flex-direction: column;
+        }
+        .container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            max-height: 100vh;
+            overflow: auto;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #0066cc;
+        }
+        nav a {
+            margin-left: 20px;
+            text-decoration: none;
+            color: #333;
+        }
+        nav a.active {
+            color: #0066cc;
+            font-weight: bold;
+        }
+        .content {
+            flex: 1;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            overflow: auto;
+            padding: 20px 0;
+        }
+        .vision {
+            background-color: #0066cc;
+            color: white;
+            padding: 40px;
+            border-radius: 10px;
+            background-image: url('https://via.placeholder.com/500x300/0066cc/ffffff?text=Vision');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .vision h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .vision h1 {
+            font-size: 36px;
+            margin-bottom: 40px;
+        }
+        .button {
+            background-color: white;
+            color: #0066cc;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            display: inline-block;
+            align-self: flex-start;
+        }
+        .right-column {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .team-section {
+            background-color: #e6f0ff;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .team-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .team-images {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .team-images img {
+            width: 12%;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+        .stats {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .stats p {
+            margin-bottom: 10px;
+        }
+        .stats span {
+            color: #3399ff;
+            font-weight: bold;
+        }
+        .news {
+            background-color: #e6f0ff;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .news-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        footer {
+            text-align: center;
+            color: #666;
+            padding: 10px 0;
+        }
+
+        @media (max-width: 768px) {
+            .content {
+                grid-template-columns: 1fr;
+            }
+            .team-images img {
+                width: 23%;
+            }
+        }
+    </style>
 </head>
-
-<body style="background-color: whitesmoke; font-family:system-ui;">
-
-  <div id="container" style="text-align: center">
-    <div id="header">
-      <img src="./Top Logo.png" style="height: 150px;">
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">Increment Capital</div>
+            <nav>
+                <a href="#" class="active">About</a>
+                <a href="#">Team</a>
+                <a href="#">Funds</a>
+                <a href="#">Portfolio</a>
+            </nav>
+        </header>
+        <div class="content">
+            <div class="vision">
+                <h1>OUR VISION</h2>
+                <h2>Increment Capital is a technology-driven investment firm based in Hong Kong and Shanghai that fuses flexible capital with an active corporate development approach to investing in Asia and Asia-driven businesses in the US.<br><br>
+                Operating integrated businesses across private equity and public markets, we partner with exceptional founders and management teams with flexible capital to build enduring businesses over time with an emphasis on accelerating growth through strategic initiatives, operational improvement and AI/technology adoption.</h1>
+                <a href="#" class="button">Request for Reports</a>
+            </div>
+            <div class="right-column">
+                <div class="team-section">
+                    <div class="team-header">
+                        <h2>OUR TEAM</h2>
+                        <a href="#">→</a>
+                    </div>
+                    <div class="team-images">
+                        <img src="https://via.placeholder.com/100" alt="Team member">
+                        <img src="https://via.placeholder.com/100" alt="Team member">
+                        <img src="https://via.placeholder.com/100" alt="Team member">
+                        <img src="https://via.placeholder.com/100" alt="Team member">
+                        <img src="https://via.placeholder.com/100" alt="Team member">
+                        <img src="https://via.placeholder.com/100" alt="Team member">
+                        <img src="https://via.placeholder.com/100" alt="Team member">
+                        <img src="https://via.placeholder.com/100" alt="Team member">
+                    </div>
+                </div>
+                <div class="stats">
+                    <p>Supporting founders since 2016</p>
+                    <p><span>200+</span> Portfolios</p>
+                    <p><span>35+</span> Companies valued at <span>$1B</span></p>
+                    <p><span>20+</span> Exit</p>
+                    <p>Founders from <span>20+</span> countries</p>
+                </div>
+                <div class="news">
+                    <div class="news-header">
+                        <img src="https://via.placeholder.com/50" alt="XtalPi logo">
+                        <a href="#">→</a>
+                    </div>
+                    <p>XtalPi Technology passed the hearing on the Hong Kong Stock Exchange and will be listed soon.</p>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <p>Hong Kong | Shanghai | Shenzhen</p>
+        </footer>
     </div>
-    <div id="centerimg" style="margin-bottom: 40px;">
-      <img src="./centerimg.png" style="height: 450px;border-radius: 10px">
-    </div>
-    <div id="intro" style="text-align:left;max-width:700px;margin:0 auto">
-      <p style="line-height:1.55em; text-align:left; font-size:15px;">
-        <span>
-          Increment Capital is a technology-driven investment firm based in Hong Kong and Shanghai that fuses flexible capital with an active corporate development approach to investing in Asia and Asia-driven businesses in the US.  Operating integrated businesses across private equity and public markets, we partner with exceptional founders and management teams with flexible capital to build enduring businesses over time with an emphasis on accelerating growth through strategic initiatives, operational improvement and AI/technology adoption.
-        </span>
-      </p>
-      <p style="line-height:1.55em; text-align:left; font-size:15px; margin-top: 10px;">
-        <span>
-          Our team has experience investing in early-stage venture, growth equity, buyouts, PIPEs, operational turnarounds, strategic mergers and spin-offs.
-        </span>
-      </p>
-      <p style="line-height:1.55em; text-align:left; font-size:15px; margin-top: 10px;">
-        <span>
-          Based in Hong Kong and Shanghai, the firm is licensed by the Securities and Futures Commission (SFC) and the Asset Management Association of China (AMAC).
-        </span>
-      </p>
-    </div>
-    <div style="margin-top: 30px;margin-bottom: 20px;">
-      <hr style="width: 800px; margin: auto; border: 0.3px solid gray;" />
-    </div>
-    <div id="bottom" style="width:800px;margin:auto; font-size:14px">
-      <div id="email" style="width:100px;float:left">
-        <a href="mailto:info@qfengfund.com" style="padding-left: 1px;text-decoration:none;color: black;">info@incrementcap.com</a>
-      </div>
-      <!-- <div style="width:700px;float:right;text-align:right;">
-        Level 12, 85 Taoyuan Road, Huangpu, Shanghai
-      </div>
-      <div style="width:700px;float:right;text-align:right;margin-top:5px;margin-bottom:5px;">
-        Level 7, 181 Queen's Road Central, Hong Kong
-      </div> -->
-    </div>
-  </div>
-
-
 </body>
-
 </html>
