@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Increment Capital</title>
+    <title>Increment Capital - Team</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         * {
@@ -218,6 +218,49 @@
         .funds-container > a:hover {
             color: #2D3748; /* Deeper color on hover */
         }
+        .team-intro {
+            background-color: #0066cc;
+            color: white;
+            padding: 40px;
+            border-radius: 20px;
+            margin: 40px 0;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            font-weight: 600; /* Ensure the intro text is also bold */
+        }
+        .team-members {
+            display: flex;
+            justify-content: space-between;
+            background-color: #333333;
+            padding: 60px 40px;
+            border-radius: 20px;
+        }
+        .team-member {
+            text-align: center;
+            width: 30%;
+        }
+        .team-member img {
+            width: 100%;
+            max-width: 250px;
+            height: auto;
+            margin-bottom: 20px;
+            border-radius: 10px;
+        }
+        .team-member h3 {
+            font-size: 1.5rem;
+            margin-bottom: 5px;
+            color: #3498db;
+            font-weight: 700; /* Make team member names even bolder */
+        }
+        .team-member p {
+            font-size: 1.1rem;
+            color: #ffffff;
+            font-weight: 600; /* Ensure team member titles are also bold */
+        }
+
+        main {
+            font-weight: 600; /* Make all text in main bolder */
+        }
     </style>
 </head>
 <body class="flex justify-center items-center min-h-screen bg-gray-100">
@@ -241,47 +284,29 @@
                 <a href="about.html" class="nav-link">About</a>
             </nav>
         </header>
-        <div class="content">
-            <div class="vision" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('centerimg.png'); background-size: cover; background-position: center;">
-                <h1>OUR MISSION</h1>
-                <h2>Partnering with exceptional founders and management teams with flexible private equity and debt capital to build enduring technology businesses over time.</h2>
+        <main class="container max-w-6xl mx-auto">
+            <div class="team-intro">
+                <p>Operating from Hong Kong, Seoul, Shanghai and Seattle, the firm is led by a team of investment professionals with strong technical expertise (Google, Microsoft, Amazon, AMD) coupled with a unique blend of public and private investment experience at world class organizations including Warburg Pincus, Clearlake Capital, Apax Partners, Capital Group, Goldman Sachs, Credit Suisse, UBS and JPMorgan. The team has experience investing in early-stage venture, growth equity, buyouts, PIPEs, special situations credit, operational turnarounds, spin-offs and restructurings.</p>
             </div>
-            <div class="right-column">
-                <div class="team-section">
-                    <div class="team-header" style="display: flex; align-items: center;">
-                        <h3 style="color: #333; font-size: 1.2em; margin: 0; line-height: 1.4; flex: 1;">Long-term strategic partnership with companies to accelerate growth through strategic acquisitions, operational improvement and AI integration</h3>
-                        <a href="#" style="color: #3399ff; text-decoration: none; font-size: 1.5em; font-weight: bold; transition: color 0.3s ease;">→</a>
-                    </div>
-                    <!-- <div class="team-images">
-                        <img src="https://via.placeholder.com/100" alt="Team member">
-                        <img src="https://via.placeholder.com/100" alt="Team member">
-                        <img src="https://via.placeholder.com/100" alt="Team member">
-                        <img src="https://via.placeholder.com/100" alt="Team member">
-                        <img src="https://via.placeholder.com/100" alt="Team member">
-                        <img src="https://via.placeholder.com/100" alt="Team member">
-                        <img src="https://via.placeholder.com/100" alt="Team member">
-                        <img src="https://via.placeholder.com/100" alt="Team member">
-                    </div> -->
+
+            <!-- <div class="team-members"> -->
+                <!-- <div class="team-member">
+                    <img src="/api/placeholder/250/250" alt="Hai Liu" style="background-color: #3498db;">
+                    <h3>Hai Liu</h3>
+                    <p>Partner</p>
                 </div>
-                <div class="stats">
-                    <p>Supporting founders since 2016</p>
-                    <p><span>200+</span> Portfolios</p>
-                    <p><span>35+</span> Companies valued at <span>$1B</span></p>
-                    <p><span>20+</span> Exit</p>
-                    <p>Founders from <span>20+</span> countries</p>
+                <div class="team-member">
+                    <img src="/api/placeholder/250/250" alt="Thomas Yao" style="background-color: #3498db;">
+                    <h3>Thomas Yao</h3>
+                    <p>Partner</p>
                 </div>
-                <div class="news">
-                    <div class="news-header">
-                        <img src="https://via.placeholder.com/50" alt="XtalPi logo">
-                        <a href="#"></a>
-                    </div>
-                    <p>XtalPi Technology passed the hearing on the Hong Kong Stock Exchange and will be listed soon.</p>
-                </div>
-            </div>
-        </div>
-        <footer>
-            <p>Hong Kong | Shanghai | Shenzhen</p>
-        </footer>
+                <div class="team-member">
+                    <img src="/api/placeholder/250/250" alt="Dan Lai" style="background-color: #3498db;">
+                    <h3>Dan Lai</h3>
+                    <p>Partner</p>
+                </div> -->
+            <!-- </div> -->
+        </main>
     </div>
 </body>
 </html>
