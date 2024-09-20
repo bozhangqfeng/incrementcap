@@ -12,22 +12,25 @@
             box-sizing: border-box;
             font-family: Arial, sans-serif;
         }
-        html, body {
-            height: 100%;
-            overflow: hidden;
-        }
         body {
             background-color: #f0f4f8;
             display: flex;
             flex-direction: column;
+            min-height: 100vh;
         }
         .container {
             flex: 1;
             display: flex;
             flex-direction: column;
+            align-items: center;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
             padding: 20px;
-            max-height: 100vh;
-            overflow: auto;
+        }
+        .scrollable-content {
+            overflow-y: auto;
+            width: 100%;
         }
         header {
             display: flex;
@@ -73,27 +76,27 @@
             background-color: #0066cc;
             color: white;
             padding: 40px;
-            border-radius: 20px; /* Increased from 10px */
+            border-radius: 20px;
             background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('centerimg.png');
             background-size: cover;
             background-position: center;
             position: relative;
             display: flex;
             flex-direction: column;
-            justify-content: space-between; /* Changed to space-between */
-            height: 100%; /* Ensure full height */
+            justify-content: space-between;
+            height: 100%;
         }
         .vision h1 {
             font-size: 36px;
-            margin-bottom: 0; /* Remove bottom margin */
+            margin-bottom: 0;
         }
         .vision h2 {
             font-size: 24px;
-            line-height: 1.2; /* 添加行高以提高可读性 */
-            margin: auto 0; /* Center vertically */
-            flex-grow: 1; /* Allow h2 to grow and center */
+            line-height: 1.2;
+            margin: auto 0;
+            flex-grow: 1;
             display: flex;
-            align-items: center; /* Center text vertically within h2 */
+            align-items: center;
         }
         .button {
             background-color: white;
@@ -112,7 +115,7 @@
         .team-section {
             background-color: #e6f0ff;
             padding: 20px;
-            border-radius: 20px; /* Increased from 10px */
+            border-radius: 20px;
         }
         .team-header {
             display: flex;
@@ -122,7 +125,7 @@
 
         .team-header h3 {
             margin-bottom: 15px;
-            color: #666; /* Matches the stats background color */
+            color: #666;
             font-weight: bold;
         }
 
@@ -149,7 +152,7 @@
             background-color: #333;
             color: white;
             padding: 20px;
-            border-radius: 20px; /* Increased from 10px */
+            border-radius: 20px;
         }
         .stats p {
             margin-bottom: 10px;
@@ -162,7 +165,7 @@
         .news {
             background-color: #e6f0ff;
             padding: 20px;
-            border-radius: 20px; /* Increased from 10px */
+            border-radius: 20px;
         }
         .news-header {
             display: flex;
@@ -274,7 +277,6 @@
             color: #2D3748;
         }
 
-        /* Update the funds dropdown trigger to match the new style */
         .funds-container > a {
             color: #718096;
             font-weight: 600;
@@ -289,20 +291,19 @@
             color: #2D3748;
         }
         .nav-link {
-            color: #718096; /* 更浅的灰色 */
-            font-weight: 600; /* Bolder font */
-            font-size: 1.1rem; /* Slightly larger font size */
-            letter-spacing: 0.05em; /* Wider spacing between letters */
-            text-transform: uppercase; /* Modern, all-caps style */
-            padding: 0.5rem 1rem; /* Adjusted padding */
-            transition: color 0.3s ease; /* Smooth color transition on hover */
+            color: #718096;
+            font-weight: 600;
+            font-size: 1.1rem;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            padding: 0.5rem 1rem;
+            transition: color 0.3s ease;
         }
         .nav-link:hover {
-            color: #2D3748; /* Deeper color on hover */
+            color: #2D3748;
         }
-        /* Update the funds dropdown trigger to match the new style */
         .funds-container > a {
-            color: #718096; /* 更浅的灰色 */
+            color: #718096;
             font-weight: 600;
             font-size: 1.1rem;
             letter-spacing: 0.05em;
@@ -312,33 +313,7 @@
         }
 
         .funds-container > a:hover {
-            color: #2D3748; /* Deeper color on hover */
-        }
-        .nav-link {
-            color: #718096; /* 更浅的灰色 */
-            font-weight: 600; /* Bolder font */
-            font-size: 1.1rem; /* Slightly larger font size */
-            letter-spacing: 0.05em; /* Wider spacing between letters */
-            text-transform: uppercase; /* Modern, all-caps style */
-            padding: 0.5rem 1rem; /* Adjusted padding */
-            transition: color 0.3s ease; /* Smooth color transition on hover */
-        }
-        .nav-link:hover {
-            color: #2D3748; /* Deeper color on hover */
-        }
-        /* Update the funds dropdown trigger to match the new style */
-        .funds-container > a {
-            color: #718096; /* 更浅的灰色 */
-            font-weight: 600;
-            font-size: 1.1rem;
-            letter-spacing: 0.05em;
-            text-transform: uppercase;
-            padding: 0.5rem 1rem;
-            transition: color 0.3s ease;
-        }
-
-        .funds-container > a:hover {
-            color: #2D3748; /* Deeper color on hover */
+            color: #2D3748;
         }
         .team-intro {
             background-color: #0066cc;
@@ -351,10 +326,10 @@
             font-weight: 600;
         }
         .team-intro p {
-            margin-bottom: 20px; /* Add space between paragraphs */
+            margin-bottom: 20px;
         }
         .team-intro p:last-child {
-            margin-bottom: 0; /* Remove margin from the last paragraph */
+            margin-bottom: 0;
         }
         .team-members {
             display: flex;
@@ -378,21 +353,21 @@
             font-size: 1.5rem;
             margin-bottom: 5px;
             color: #3498db;
-            font-weight: 700; /* Make team member names even bolder */
+            font-weight: 700;
         }
         .team-member p {
             font-size: 1.1rem;
             color: #ffffff;
-            font-weight: 600; /* Ensure team member titles are also bold */
+            font-weight: 600;
         }
 
         main {
-            font-weight: 600; /* Make all text in main bolder */
+            font-weight: 600;
         }
 
         .investment-strategy {
             background-color: white;
-            border-radius: 20px; /* Updated from 0.5rem */
+            border-radius: 20px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             padding: 1.5rem;
         }
@@ -415,7 +390,7 @@
             display: flex;
             flex-direction: column;
             height: 20rem;
-            border-radius: 20px; /* Updated from 0.5rem */
+            border-radius: 20px;
             overflow: hidden;
         }
 
@@ -471,7 +446,7 @@
         .strategy-details {
             width: 100%;
             background-color: #ecfdf5;
-            border-radius: 20px; /* Updated from 0.5rem */
+            border-radius: 20px;
             padding: 1rem;
             color: #666;
         }
@@ -495,70 +470,78 @@
 
         .target-returns {
             color: #1d4ed8;
-            font-weight: 1000; /* Increased from 700 to 800 */
+            font-weight: 1000;
         }
 
         .strategy-details ul li {
-            font-weight: 600; /* Add this line to set the default font weight for list items */
+            font-weight: 600;
+        }
+
+        main {
+            width: 100%;
+            max-width: 1000px;
+            margin: 0 auto;
         }
     </style>
 </head>
 <body class="flex justify-center items-start bg-gray-100">
-    <div class="container scrollable-content">
-        <header>
-            <div class="logo">
-                <a href="index.html">
-                    <img src="Top Logo.png" alt="Increment Capital">
-                </a>
-            </div>
-            <nav class="flex items-center">
-                <div class="funds-container relative">
-                    <a href="#" class="nav-link">Funds</a>
-                    <div class="funds-dropdown">
-                        <a href="fund1.html" class="block py-2 px-4 hover:bg-gray-700 transition-colors duration-200">Technology Seed Stage Opportunities</a>
-                        <a href="fund2.html" class="block py-2 px-4 hover:bg-gray-700 transition-colors duration-200">AI Infrastructure Credit Opportunities</a>
+    <div class="container">
+        <div class="scrollable-content">
+            <header>
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="Top Logo.png" alt="Increment Capital">
+                    </a>
+                </div>
+                <nav class="flex items-center">
+                    <div class="funds-container relative">
+                        <a href="#" class="nav-link">Funds</a>
+                        <div class="funds-dropdown">
+                            <a href="fund1.html" class="block py-2 px-4 hover:bg-gray-700 transition-colors duration-200">Technology Seed Stage Opportunities</a>
+                            <a href="fund2.html" class="block py-2 px-4 hover:bg-gray-700 transition-colors duration-200">AI Infrastructure Credit Opportunities</a>
+                        </div>
+                    </div>
+                    <a href="team.html" class="nav-link">Team</a>
+                    <a href="index.html" class="nav-link">About</a>
+                </nav>
+            </header>
+            <main>
+                <div class="team-intro">
+                    <p>Integrating technology private equity, credit, special situations and real estate investment skillsets with data center operator partnerships, the Fund makes senior secured private credit investments in AI data centers and related infrastructure.</p>
+                </div>
+                <div class="investment-strategy">
+                    <div class="investment-strategy-content">
+                        <div class="capital-structure">
+                            <div class="capital-structure-item common-equity flex items-center justify-center">Common Equity</div>
+                            <div class="capital-structure-item senior-preferred-equity flex items-center justify-center">Senior Preferred Equity</div>
+                            <div class="capital-structure-item private-credit-hybrid flex items-center justify-center">Private Credit Hybrid</div>
+                            <div class="capital-structure-item senior-secured-debt flex items-center justify-center">Senior Secured Debt</div>
+                        </div>
+                        <div class="arrow-container">
+                            <svg class="arrow-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                            </svg>
+                        </div>
+                        <div class="strategy-details">
+                            <h2>Investment Strategy</h2>
+                            <ul>
+                                <li>Investing in senior credit with equity features</li>
+                                <li>Strong downside protection while preserving equity upside participation</li>
+                                <li class="target-returns">Targeting 15%+ net returns, of which at least 11% is contractual</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-                <a href="team.html" class="nav-link">Team</a>
-                <a href="index.html" class="nav-link">About</a>
-            </nav>
-        </header>
-        <main class="container max-w-6xl mx-auto">
-            <div class="team-intro">
-                <p>Integrating technology private equity, credit, special situations and real estate investment skillsets with data center operator partnerships, the Fund makes senior secured private credit investments in AI data centers and related infrastructure.</p>
-            </div>
-            <div class="investment-strategy">
-                <div class="investment-strategy-content">
-                    <div class="capital-structure">
-                        <div class="capital-structure-item common-equity flex items-center justify-center">Common Equity</div>
-                        <div class="capital-structure-item senior-preferred-equity flex items-center justify-center">Senior Preferred Equity</div>
-                        <div class="capital-structure-item private-credit-hybrid flex items-center justify-center">Private Credit Hybrid</div>
-                        <div class="capital-structure-item senior-secured-debt flex items-center justify-center">Senior Secured Debt</div>
-                    </div>
-                    <div class="arrow-container">
-                        <svg class="arrow-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                        </svg>
-                    </div>
-                    <div class="strategy-details">
-                        <h2>Investment Strategy</h2>
-                        <ul>
-                            <li>Investing in senior credit with equity features</li>
-                            <li>Strong downside protection while preserving equity upside participation</li>
-                            <li class="target-returns">Targeting 15%+ net returns, of which at least 11% is contractual</li>
-                        </ul>
-                    </div>
+                <div class="team-intro mt-8">
+                    <p>Private credit investments structured with:</p>
+                    <ul class="list-disc pl-6 mt-4">
+                        <li>Strong downside protection through significant asset coverage secured by liens and stable long-term cash flows</li>
+                        <li>Double digit contractual returns</li>
+                        <li>Equity upside participation through warrants, conversion features and liquidation preference</li>
+                    </ul>
                 </div>
-            </div>
-            <div class="team-intro mt-8">
-                <p>Private credit investments structured with:</p>
-                <ul class="list-disc pl-6 mt-4">
-                    <li>Strong downside protection through significant asset coverage secured by liens and stable long-term cash flows</li>
-                    <li>Double digit contractual returns</li>
-                    <li>Equity upside participation through warrants, conversion features and liquidation preference</li>
-                </ul>
-            </div>
-        </main>
+            </main>
+        </div>
     </div>
 </body>
 </html>

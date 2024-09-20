@@ -12,22 +12,16 @@
             box-sizing: border-box;
             font-family: Arial, sans-serif;
         }
-        html, body {
-            height: 100%;
-            overflow: hidden;
-        }
         body {
             background-color: #f0f4f8;
-            display: flex;
-            flex-direction: column;
+            min-height: 100vh;
         }
         .container {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
             padding: 20px;
-            max-height: 100vh;
-            overflow: auto;
+        }
+        .scrollable-content {
+            max-height: none;
+            overflow-y: auto;
         }
         header {
             display: flex;
@@ -363,8 +357,8 @@
         }
     </style>
 </head>
-<body class="flex justify-center items-center min-h-screen bg-gray-100">
-    <div class="container">
+<body class="flex justify-center items-start bg-gray-100">
+    <div class="container scrollable-content">
         <header>
             <div class="logo">
                 <a href="index.html">
