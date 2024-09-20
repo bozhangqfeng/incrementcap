@@ -12,26 +12,45 @@
             box-sizing: border-box;
             font-family: Arial, sans-serif;
         }
+        html, body {
+            height: 100%;
+            overflow: hidden;
+        }
         body {
             background-color: #f0f4f8;
-            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
         }
         .container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
             padding: 20px;
-        }
-        .scrollable-content {
-            max-height: none;
-            overflow-y: auto;
+            max-height: 100vh;
+            overflow: auto;
         }
         header {
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 10px 0;
+            flex-wrap: wrap;
+        }
+        .logo {
+            flex-shrink: 0;
+            margin-right: 20px;
         }
         .logo img {
-            height: 120px; /* 调整这个值以适应你的logo图片 */
+            height: 120px;
             width: auto;
+            max-width: 100%;
+            object-fit: contain;
+        }
+        nav {
+            flex-grow: 1;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
         }
         nav a {
             margin-left: 20px;
@@ -55,22 +74,26 @@
             color: white;
             padding: 40px;
             border-radius: 20px; /* Increased from 10px */
-            background-image: url('https://via.placeholder.com/500x300/0066cc/ffffff?text=Vision');
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('centerimg.png');
             background-size: cover;
             background-position: center;
             position: relative;
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            justify-content: space-between; /* Changed to space-between */
+            height: 100%; /* Ensure full height */
         }
         .vision h1 {
             font-size: 36px;
-            margin-bottom: 80px;
+            margin-bottom: 0; /* Remove bottom margin */
         }
         .vision h2 {
             font-size: 24px;
             line-height: 1.2; /* 添加行高以提高可读性 */
-            margin-bottom: 40px;
+            margin: auto 0; /* Center vertically */
+            flex-grow: 1; /* Allow h2 to grow and center */
+            display: flex;
+            align-items: center; /* Center text vertically within h2 */
         }
         .button {
             background-color: white;
@@ -93,10 +116,25 @@
         }
         .team-header {
             display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 20px;
+            flex-direction: column;
+            align-items: flex-start;
         }
+
+        .team-header h3 {
+            margin-bottom: 15px;
+            color: #666; /* Matches the stats background color */
+            font-weight: bold;
+        }
+
+        .team-header a {
+            color: #3399ff;
+            text-decoration: none;
+            font-size: 1.5em;
+            font-weight: bold;
+            transition: color 0.3s ease;
+            align-self: flex-end;
+        }
+
         .team-images {
             display: flex;
             justify-content: space-between;
@@ -115,6 +153,7 @@
         }
         .stats p {
             margin-bottom: 10px;
+            font-weight: bold;
         }
         .stats span {
             color: #3399ff;
@@ -143,6 +182,17 @@
             }
             .team-images img {
                 width: 23%;
+            }
+            header {
+                justify-content: center;
+            }
+            .logo {
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+            nav {
+                width: 100%;
+                justify-content: center;
             }
         }
 
@@ -185,6 +235,32 @@
             visibility: visible;
             opacity: 1;
             transform: translateX(-50%) translateY(0);
+        }
+        .nav-link {
+            color: #718096; /* 更浅的灰色 */
+            font-weight: 600; /* Bolder font */
+            font-size: 1.1rem; /* Slightly larger font size */
+            letter-spacing: 0.05em; /* Wider spacing between letters */
+            text-transform: uppercase; /* Modern, all-caps style */
+            padding: 0.5rem 1rem; /* Adjusted padding */
+            transition: color 0.3s ease; /* Smooth color transition on hover */
+        }
+        .nav-link:hover {
+            color: #2D3748; /* Deeper color on hover */
+        }
+        /* Update the funds dropdown trigger to match the new style */
+        .funds-container > a {
+            color: #718096; /* 更浅的灰色 */
+            font-weight: 600;
+            font-size: 1.1rem;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            padding: 0.5rem 1rem;
+            transition: color 0.3s ease;
+        }
+
+        .funds-container > a:hover {
+            color: #2D3748; /* Deeper color on hover */
         }
         .nav-link {
             color: #718096; /* 更浅的灰色 */
