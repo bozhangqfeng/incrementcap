@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Increment Capital - Team</title>
+    <title>Increment Capital</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         * {
@@ -12,22 +12,16 @@
             box-sizing: border-box;
             font-family: Arial, sans-serif;
         }
-        html, body {
-            height: 100%;
-            overflow: hidden;
-        }
         body {
             background-color: #f0f4f8;
-            display: flex;
-            flex-direction: column;
+            min-height: 100vh;
         }
         .container {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
             padding: 20px;
-            max-height: 100vh;
-            overflow: auto;
+        }
+        .scrollable-content {
+            max-height: none;
+            overflow-y: auto;
         }
         header {
             display: flex;
@@ -267,10 +261,122 @@
         main {
             font-weight: 600; /* Make all text in main bolder */
         }
+
+        .investment-strategy {
+            background-color: white;
+            border-radius: 20px; /* Updated from 0.5rem */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 1.5rem;
+        }
+
+        .investment-strategy-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        @media (min-width: 768px) {
+            .investment-strategy-content {
+                flex-direction: row;
+            }
+        }
+
+        .capital-structure {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            height: 20rem;
+            border-radius: 20px; /* Updated from 0.5rem */
+            overflow: hidden;
+        }
+
+        @media (min-width: 768px) {
+            .capital-structure {
+                width: 40%;
+            }
+        }
+
+        .capital-structure-item {
+            padding: 0.5rem;
+            color: white;
+            text-align: center;
+        }
+
+        .common-equity {
+            background-color: #4ade80;
+        }
+
+        .senior-preferred-equity {
+            background-color: #93c5fd;
+        }
+
+        .private-credit-hybrid {
+            background-color: #3b82f6;
+            flex-grow: 1;
+        }
+
+        .senior-secured-debt {
+            background-color: #1d4ed8;
+            flex-grow: 3;
+        }
+
+        .arrow-container {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        @media (min-width: 768px) {
+            .arrow-container {
+                width: 20%;
+            }
+        }
+
+        .arrow-icon {
+            width: 4rem;
+            height: 4rem;
+            color: #22c55e;
+        }
+
+        .strategy-details {
+            width: 100%;
+            background-color: #ecfdf5;
+            border-radius: 20px; /* Updated from 0.5rem */
+            padding: 1rem;
+            color: #666;
+        }
+
+        @media (min-width: 768px) {
+            .strategy-details {
+                width: 40%;
+            }
+        }
+
+        .strategy-details h2 {
+            font-size: 1.125rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .strategy-details ul {
+            list-style-type: disc;
+            padding-left: 1.25rem;
+        }
+
+        .target-returns {
+            color: #1d4ed8;
+            font-weight: 1000; /* Increased from 700 to 800 */
+        }
+
+        .strategy-details ul li {
+            font-weight: 600; /* Add this line to set the default font weight for list items */
+        }
     </style>
 </head>
-<body class="flex justify-center items-center min-h-screen bg-gray-100">
-    <div class="container">
+<body class="flex justify-center items-start bg-gray-100">
+    <div class="container scrollable-content">
         <header>
             <div class="logo">
                 <a href="index.html">
@@ -291,8 +397,38 @@
         </header>
         <main class="container max-w-6xl mx-auto">
             <div class="team-intro">
-                <p>Operating from Hong Kong, Seoul, Shanghai and Seattle, the firm is led by a team of investment professionals with strong technical expertise (Google, Microsoft, Amazon, AMD) coupled with a unique blend of public and private investment experience at world class organizations including Warburg Pincus, Clearlake Capital, Apax Partners, Capital Group, Goldman Sachs, Credit Suisse, UBS and JPMorgan.</p>
-                <p>The team has experience investing in early-stage venture, growth equity, buyouts, PIPEs, special situations credit, operational turnarounds, spin-offs and restructurings.</p>
+                <p>Integrating technology private equity, credit, special situations and real estate investment skillsets with data center operator partnerships, the Fund makes senior secured private credit investments in AI data centers and related infrastructure.</p>
+            </div>
+            <div class="investment-strategy">
+                <div class="investment-strategy-content">
+                    <div class="capital-structure">
+                        <div class="capital-structure-item common-equity flex items-center justify-center">Common Equity</div>
+                        <div class="capital-structure-item senior-preferred-equity flex items-center justify-center">Senior Preferred Equity</div>
+                        <div class="capital-structure-item private-credit-hybrid flex items-center justify-center">Private Credit Hybrid</div>
+                        <div class="capital-structure-item senior-secured-debt flex items-center justify-center">Senior Secured Debt</div>
+                    </div>
+                    <div class="arrow-container">
+                        <svg class="arrow-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                        </svg>
+                    </div>
+                    <div class="strategy-details">
+                        <h2>Investment Strategy</h2>
+                        <ul>
+                            <li>Investing in senior credit with equity features</li>
+                            <li>Strong downside protection while preserving equity upside participation</li>
+                            <li class="target-returns">Targeting 15%+ net returns, of which at least 11% is contractual</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="team-intro mt-8">
+                <p>Private credit investments structured with:</p>
+                <ul class="list-disc pl-6 mt-4">
+                    <li>Strong downside protection through significant asset coverage secured by liens and stable long-term cash flows</li>
+                    <li>Double digit contractual returns</li>
+                    <li>Equity upside participation through warrants, conversion features and liquidation preference</li>
+                </ul>
             </div>
         </main>
     </div>

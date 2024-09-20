@@ -61,26 +61,22 @@
             color: white;
             padding: 40px;
             border-radius: 20px; /* Increased from 10px */
-            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('centerimg.png');
+            background-image: url('https://via.placeholder.com/500x300/0066cc/ffffff?text=Vision');
             background-size: cover;
             background-position: center;
             position: relative;
             display: flex;
             flex-direction: column;
-            justify-content: space-between; /* Changed to space-between */
-            height: 100%; /* Ensure full height */
+            justify-content: center;
         }
         .vision h1 {
             font-size: 36px;
-            margin-bottom: 0; /* Remove bottom margin */
+            margin-bottom: 80px;
         }
         .vision h2 {
             font-size: 24px;
             line-height: 1.2; /* 添加行高以提高可读性 */
-            margin: auto 0; /* Center vertically */
-            flex-grow: 1; /* Allow h2 to grow and center */
-            display: flex;
-            align-items: center; /* Center text vertically within h2 */
+            margin-bottom: 40px;
         }
         .button {
             background-color: white;
@@ -103,25 +99,10 @@
         }
         .team-header {
             display: flex;
-            flex-direction: column;
-            align-items: flex-start;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
         }
-
-        .team-header h3 {
-            margin-bottom: 15px;
-            color: #666; /* Matches the stats background color */
-            font-weight: bold;
-        }
-
-        .team-header a {
-            color: #3399ff;
-            text-decoration: none;
-            font-size: 1.5em;
-            font-weight: bold;
-            transition: color 0.3s ease;
-            align-self: flex-end;
-        }
-
         .team-images {
             display: flex;
             justify-content: space-between;
@@ -140,7 +121,6 @@
         }
         .stats p {
             margin-bottom: 10px;
-            font-weight: bold;
         }
         .stats span {
             color: #3399ff;
@@ -238,6 +218,79 @@
         .funds-container > a:hover {
             color: #2D3748; /* Deeper color on hover */
         }
+        .team-intro {
+            background-color: #0066cc;
+            color: white;
+            padding: 40px;
+            border-radius: 20px;
+            margin: 40px 0;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            font-weight: 600;
+        }
+        .team-intro p {
+            margin-bottom: 20px; /* Add space between paragraphs */
+        }
+        .team-intro p:last-child {
+            margin-bottom: 0; /* Remove margin from the last paragraph */
+        }
+        .team-members {
+            display: flex;
+            justify-content: space-between;
+            background-color: #333333;
+            padding: 60px 40px;
+            border-radius: 20px;
+        }
+        .team-member {
+            text-align: center;
+            width: 30%;
+        }
+        .team-member img {
+            width: 100%;
+            max-width: 250px;
+            height: auto;
+            margin-bottom: 20px;
+            border-radius: 10px;
+        }
+        .team-member h3 {
+            font-size: 1.5rem;
+            margin-bottom: 5px;
+            color: #3498db;
+            font-weight: 700; /* Make team member names even bolder */
+        }
+        .team-member p {
+            font-size: 1.1rem;
+            color: #ffffff;
+            font-weight: 600; /* Ensure team member titles are also bold */
+        }
+
+        main {
+            font-weight: 600; /* Make all text in main bolder */
+        }
+
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            padding: 40px;
+        }
+
+        .image-grid img {
+            width: 100%;
+            height: 100px; /* Set a fixed height */
+            object-fit: contain; /* Maintain aspect ratio */
+            border-radius: 10px;
+            padding: 10px; /* Add some padding */
+        }
+
+        @media (max-width: 768px) {
+            .image-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .image-grid img {
+                height: 80px; /* Adjust height for mobile */
+            }
+        }
     </style>
 </head>
 <body class="flex justify-center items-center min-h-screen bg-gray-100">
@@ -260,27 +313,27 @@
                 <a href="index.html" class="nav-link">About</a>
             </nav>
         </header>
-        <div class="content">
-            <div class="vision" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('centerimg.png'); background-size: cover; background-position: center;">
-                <h1>OUR MISSION</h1>
-                <h2>Partnering with exceptional founders and management teams with flexible private equity and debt capital to build enduring technology businesses over time.</h2>
+        <main class="container max-w-6xl mx-auto">
+            <div class="team-intro">
+                <p>We invest at the genesis of innovation. Strong partnership with founders to build enduring technology businesses.</p>
             </div>
-            <div class="right-column">
-                <div class="team-section">
-                    <div class="team-header">
-                        <h3>Increment Capital is a technology investment firm that fuses flexible capital with an active corporate development approach to investing across the capital structure in Asia and Asia-linked businesses in the US.</h3>
-                        <h3>A long-term strategic partner, we help accelerate growth through strategic acquisitions, operational improvement and AI/technology adoption.</h3>
-                        <h3>Employing a sector driven approach, we invest in consumer technology, blockchain, artificial intelligence and AI/Digital infrastructure businesses.</h3>
-                    </div>
-                </div>
-                <div class="stats">
-                    <p>With a sector-driven and active corporate development approach, our partners have supported innovative companies such as <span>Klook Travel</span>, <span>Gbike</span>, <span>Zetta</span> (with SK REIT), <span>Anthropic</span>, <span>Scroll</span>, <span>XtalPi</span>, <span>Tornado</span>, <span>Atto Research</span>, <span>Falcon Alpha</span>, <span>Innomatrix</span>, among many others.</p>
+            <div class="bg-gray-600 rounded-3xl mt-8">
+                <div class="image-grid">
+                    <img src="imgs/klook.png" alt="Klook">
+                    <img src="imgs/zetta.png" alt="Zetta">
+                    <img src="imgs/xtalpi.png" alt="Xtalpi">
+                    <img src="imgs/gbike.png" alt="GBike">
+                    <img src="imgs/anthropic.png" alt="Anthropic">
+                    <img src="imgs/tornado.png" alt="Tornado">
+                    <img src="imgs/attoresearch.png" alt="Attoresearch">
+                    <img src="imgs/falconalpha.png" alt="FalconAlpha">
+                    <img src="imgs/innomatrix.png" alt="Innomatrix">
+                    <img src="imgs/getlinks.png" alt="GetLinks">
+                    <img src="imgs/goodcatch.png" alt="GoodCatch">
+                    <img src="imgs/commerce3.png" alt="Commerce3">
                 </div>
             </div>
-        </div>
-        <footer>
-            <p>Hong Kong | Shanghai | Shenzhen</p>
-        </footer>
+        </main>
     </div>
 </body>
 </html>
