@@ -201,42 +201,33 @@
         }
 
         .funds-dropdown {
-            visibility: hidden;
-            opacity: 0;
+            display: none;
             position: absolute;
             top: 100%;
             left: 50%;
-            transform: translateX(-50%) translateY(10px);
+            transform: translateX(-50%);
             width: 500px;
             max-width: 90vw;
             min-width: 350px;
             background-color: #333;
             border-radius: 20px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
             overflow: hidden;
             padding: 10px;
             z-index: 1000;
         }
 
-        .funds-container:hover .funds-dropdown {
-            visibility: visible;
-            opacity: 1;
-            transform: translateX(-50%) translateY(0);
+        .funds-container:focus-within .funds-dropdown {
+            display: block;
         }
 
         @media (max-width: 768px) {
             .funds-dropdown {
                 left: 0;
                 right: 0;
-                transform: translateY(10px);
+                transform: none;
                 width: auto;
                 max-width: 100%;
-            }
-
-            .funds-container:hover .funds-dropdown,
-            .funds-container:focus-within .funds-dropdown {
-                transform: translateY(0);
             }
         }
 
@@ -303,7 +294,7 @@
             <nav class="flex items-center">
                 <div class="funds-container relative">
                     <a href="#" class="nav-link" tabindex="0">Funds</a>
-                    <div class="funds-dropdown">
+                    <div class="funds-dropdown" tabindex="0">
                         <a href="fund1.html" class="block py-2 px-4 hover:bg-gray-700 transition-colors duration-200">Technology Seed Stage Opportunities</a>
                         <a href="fund2.html" class="block py-2 px-4 hover:bg-gray-700 transition-colors duration-200">AI Infrastructure Credit Opportunities</a>
                     </div>
