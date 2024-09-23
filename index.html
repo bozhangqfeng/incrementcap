@@ -12,10 +12,6 @@
             box-sizing: border-box;
             font-family: Arial, sans-serif;
         }
-        html, body {
-            height: 100%;
-            overflow: hidden;
-        }
         body {
             background-color: #f0f4f8;
             display: flex;
@@ -201,33 +197,41 @@
         }
 
         .funds-dropdown {
-            display: none;
+            visibility: hidden;
+            opacity: 0;
             position: absolute;
             top: 100%;
             left: 50%;
-            transform: translateX(-50%);
+            transform: translateX(-50%) translateY(10px);
             width: 500px;
             max-width: 90vw;
             min-width: 350px;
             background-color: #333;
             border-radius: 20px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
             overflow: hidden;
             padding: 10px;
             z-index: 1000;
         }
 
-        .funds-container:focus-within .funds-dropdown {
-            display: block;
+        .funds-container:hover .funds-dropdown {
+            visibility: visible;
+            opacity: 1;
+            transform: translateX(-50%) translateY(0);
         }
 
         @media (max-width: 768px) {
             .funds-dropdown {
                 left: 0;
                 right: 0;
-                transform: none;
+                transform: translateY(10px);
                 width: auto;
                 max-width: 100%;
+            }
+
+            .funds-container:hover .funds-dropdown {
+                transform: translateY(0);
             }
         }
 
@@ -293,8 +297,8 @@
             </div>
             <nav class="flex items-center">
                 <div class="funds-container relative">
-                    <a href="#" class="nav-link" tabindex="0">Funds</a>
-                    <div class="funds-dropdown" tabindex="0">
+                    <a href="#" class="nav-link">Funds</a>
+                    <div class="funds-dropdown">
                         <a href="fund1.html" class="block py-2 px-4 hover:bg-gray-700 transition-colors duration-200">Technology Seed Stage Opportunities</a>
                         <a href="fund2.html" class="block py-2 px-4 hover:bg-gray-700 transition-colors duration-200">AI Infrastructure Credit Opportunities</a>
                     </div>
