@@ -83,7 +83,7 @@
         }
         .vision h2 {
             font-size: 24px;
-            line-height: 1.2; /* 添加行高以提高可读性 */
+            line-height: 1.2; /* 添加行高以高可读性 */
             margin: auto 0; /* Center vertically */
             flex-grow: 1; /* Allow h2 to grow and center */
             display: flex;
@@ -336,24 +336,32 @@
         .image-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-            gap: 20px;
-            padding: 40px;
+            gap: 50px;
+            padding: 30px;
+        }
+
+        .image-grid > div {
+            display: flex;
+            justify-content: flex-start; /* 添加这行 */
+            align-items: center; /* 添加这行 */
         }
 
         .image-grid img {
-            width: 100%;
-            height: 100px; /* Set a fixed height */
-            object-fit: contain; /* Maintain aspect ratio */
+            width: auto; /* 修改这行 */
+            max-width: 100%; /* 添加这行 */
+            height: 35px;
+            object-fit: contain;
             border-radius: 10px;
-            padding: 10px; /* Add some padding */
+            padding: 9px;
         }
 
         @media (max-width: 768px) {
             .image-grid {
                 grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
             }
             .image-grid img {
-                height: 80px; /* Adjust height for mobile */
+                height: 35px; /* Adjust height for mobile */
             }
         }
     </style>
@@ -383,19 +391,20 @@
                 <p>We invest at the genesis of innovation. Strong partnership with founders to build enduring technology businesses.</p>
             </div>
             <div class="bg-gray-300 rounded-3xl mt-8">
+                <h2 class="text-3xl font-bold text-center pt-10 pb-2 text-[#555]">Current Portfolio</h2>
                 <div class="image-grid">
                     <img src="imgs/klook.png" alt="Klook">
                     <img src="imgs/zetta.png" alt="Zetta">
                     <img src="imgs/xtalpi.png" alt="Xtalpi">
-                    <img src="imgs/gbike.png" alt="GBike">
-                    <img src="imgs/anthropic.png" alt="Anthropic">
-                    <img src="imgs/tornado.png" alt="Tornado">
+                    <img src="imgs/gbike.png" alt="GBike" style="height: 33px;">
+                    <img src="imgs/anthropic.png" alt="Anthropic" style="height: 33px;">
+                    <img src="imgs/tornado.png" alt="Tornado" style="height: 33px;">
                     <img src="imgs/attoresearch.png" alt="Attoresearch">
                     <img src="imgs/falconalpha.png" alt="FalconAlpha">
                     <img src="imgs/innomatrix.png" alt="Innomatrix">
-                    <img src="imgs/getlinks.png" alt="GetLinks">
-                    <img src="imgs/goodcatch.png" alt="GoodCatch">
-                    <img src="imgs/commerce3.png" alt="Commerce3">
+                    <img src="imgs/getlinks.png" alt="GetLinks" style="height: 50px;">
+                    <img src="imgs/goodcatch.png" alt="GoodCatch" style="height: 50px;">
+                    <img src="imgs/commerce3.png" alt="Commerce3" style="height: 50px;">
                 </div>
             </div>
         </main>
