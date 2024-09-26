@@ -353,15 +353,28 @@
             object-fit: contain;
             border-radius: 10px;
             padding: 9px;
+            margin: auto;
+        }
+        .bigger-img {
+            height: 50px !important;
         }
 
         @media (max-width: 768px) {
             .image-grid {
                 grid-template-columns: repeat(2, 1fr);
                 gap: 20px;
+                padding: 40px;
             }
             .image-grid img {
-                height: 35px; /* Adjust height for mobile */
+                width: 100%;
+                height: 50px; /* Adjust height for mobile */
+                padding: 10px;
+            }
+            .smaller-img {
+                height: 40px !important;
+            }
+            .bigger-img {
+                height: 60px !important;
             }
         }
     </style>
@@ -396,15 +409,15 @@
                     <img src="imgs/klook.png" alt="Klook">
                     <img src="imgs/zetta.png" alt="Zetta">
                     <img src="imgs/xtalpi.png" alt="Xtalpi">
-                    <img src="imgs/gbike.png" alt="GBike" style="height: 33px;">
-                    <img src="imgs/anthropic.png" alt="Anthropic" style="height: 33px;">
-                    <img src="imgs/tornado.png" alt="Tornado" style="height: 33px;">
-                    <img src="imgs/attoresearch.png" alt="Attoresearch">
-                    <img src="imgs/falconalpha.png" alt="FalconAlpha">
-                    <img src="imgs/innomatrix.png" alt="Innomatrix">
-                    <img src="imgs/getlinks.png" alt="GetLinks" style="height: 50px;">
-                    <img src="imgs/goodcatch.png" alt="GoodCatch" style="height: 50px;">
-                    <img src="imgs/commerce3.png" alt="Commerce3" style="height: 50px;">
+                    <img src="imgs/gbike.png" alt="GBike" class="smaller-img">
+                    <img src="imgs/anthropic.png" alt="Anthropic" class="smaller-img">
+                    <img src="imgs/tornado.png" alt="Tornado" class="smaller-img">
+                    <img src="imgs/attoresearch.png" alt="Attoresearch" class="bigger-img">
+                    <img src="imgs/falconalpha.png" alt="FalconAlpha" class="bigger-img">
+                    <img src="imgs/innomatrix.png" alt="Innomatrix" class="bigger-img">
+                    <img src="imgs/getlinks.png" alt="GetLinks" class="bigger-img">
+                    <img src="imgs/goodcatch.png" alt="GoodCatch" class="bigger-img">
+                    <img src="imgs/commerce3.png" alt="Commerce3" class="bigger-img">
                 </div>
             </div>
         </main>
