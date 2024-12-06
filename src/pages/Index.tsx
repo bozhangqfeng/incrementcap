@@ -128,7 +128,7 @@ const Index = () => {
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
             <FeatureCard
-              title="Global Investment"
+              title="Global"
               description="Increment Capital is a technology investment firm that fuses flexible capital with an active corporate development approach to investing across the capital structure in Asia and Asia-linked businesses in the US."
               icon={Globe}
             />
@@ -155,7 +155,7 @@ const Index = () => {
           <div className="grid md:grid-cols-2 gap-8">
             <div className="p-6 rounded-lg bg-white/10 backdrop-blur">
               <Users className="w-12 h-12 text-white mx-auto mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-2">20+ Tech Partners</h3>
+              <h3 className="text-xl font-semibold text-white mb-2">Tech Partners</h3>
               <p className="text-blue-100">With a sector-driven and active corporate development approach, our partners have supported innovative companies such as Klook Travel, Gbike, Zetta (with SK REIT), Anthropic, Scroll, XtalPi, Tornado, Atto Research, Falcon Alpha, Innomatrix, GETLINKS, GOOD CATCH, Commerce2 among many others.</p>
             </div>
             <div className="p-6 rounded-lg bg-white/10 backdrop-blur">
@@ -288,7 +288,7 @@ const Index = () => {
                 alt="Experienced"
                 className="w-full h-48 object-cover rounded-lg mb-4"
               />
-              <h3 className="text-lg font-semibold mb-2 text-white">Experienced</h3>
+              <h3 className="text-lg font-semibold mb-2 text-white">World Class Investment Experience</h3>
               <p className="text-blue-100">Unique blend of public and private investment experience
                 at world class organizations including Warburg Pincus, Clearlake Capital, Apax Partners, Capital Group, Goldman Sachs, Credit Suisse, UBS and JPMorgan.</p>
             </div>
@@ -298,7 +298,7 @@ const Index = () => {
                 alt="Extensive"
                 className="w-full h-48 object-cover roun</div>ded-lg mb-4"
               />
-              <h3 className="text-lg font-semibold mb-2 text-white">Extensive</h3>
+              <h3 className="text-lg font-semibold mb-2 text-white">Multi Asset Class Expertise</h3>
               <p className="text-blue-100">Invest in early-stage venture, growth equity, buyouts, PIPEs, special situations credit, operational turnarounds, spin-offs and restructurings</p>
             </div>
           </div>
