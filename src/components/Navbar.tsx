@@ -67,19 +67,19 @@ const Navbar = () => {
                 onClick={() => scrollToSection('features')}
                 className="text-sm font-medium hover:text-primary text-left"
               >
-                Products
+                Investment Approach
               </button>
               <button
-                onClick={() => scrollToSection('integrate')}
+                onClick={() => scrollToSection('partners')}
                 className="text-sm font-medium hover:text-primary text-left"
               >
-                Solutions
+                Private Equity
               </button>
               <button
-                onClick={() => scrollToSection('community')}
+                onClick={() => scrollToSection('infrastructure')}
                 className="text-sm font-medium hover:text-primary text-left"
               >
-                Resources
+                Private Credit
               </button>
               <button
                 onClick={() => scrollToSection('team')}

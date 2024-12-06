@@ -1,7 +1,97 @@
-import { Database, Server, Network, Users, Code, Globe, CircleDollarSign } from "lucide-react";
+import { useState, useEffect } from 'react';
+import { Database, Server, Network, Users, Code, Globe, CircleDollarSign, ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Navbar from "@/components/Navbar";
 import FeatureCard from "@/components/FeatureCard";
+
+const ImageCarousel = () => {
+  const images = [
+    'partner/anthropic.png',
+    'partner/attoresearch.png',
+    'partner/commerce3.png',
+    'partner/falconalpha.png',
+    'partner/gbike.png',
+    'partner/getlinks.png',
+    'partner/goodcatch.png',
+    'partner/innomatrix.png',
+    'partner/klook.png',
+    'partner/tornado.png',
+    'partner/xtalpi.png',
+    'partner/zetta.png',
+  ];
+
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentIndex((prevIndex) =>
+        prevIndex === images.length - 1 ? 0 : prevIndex + 1
+      );
+    }, 4000); // Rotate every 4 seconds
+
+    return () => clearInterval(timer);
+  }, []);
+
+  const nextSlide = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === images.length - 1 ? 0 : prevIndex + 1
+    );
+  };
+
+  const prevSlide = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === 0 ? images.length - 1 : prevIndex - 1
+    );
+  };
+
+  return (
+    <div className="p-6 rounded-lg bg-white backdrop-blur relative aspect-[25/9] w-full overflow-hidden group">
+      {/* Images */}
+      {images.map((image, index) => (
+        <div
+          key={index}
+          className={`absolute inset-0 p-[7%] transition-transform duration-500 ease-in-out ${
+            index === currentIndex ? 'translate-x-0' :
+            index < currentIndex ? '-translate-x-full' : 'translate-x-full'
+          }`}
+        >
+          <img
+            src={image}
+            alt={`Portfolio ${index + 1}`}
+            className="w-full h-full object-contain rounded-lg"
+          />
+        </div>
+      ))}
+
+      {/* Navigation Arrows */}
+      {/* <button
+        onClick={prevSlide}
+        className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/30 rounded-full p-2 opacity-0 group-hover:opacity-100 transition-opacity"
+      >
+        <ChevronLeft className="w-6 h-6 text-white" />
+      </button>
+      <button
+        onClick={nextSlide}
+        className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/30 rounded-full p-2 opacity-0 group-hover:opacity-100 transition-opacity"
+      >
+        <ChevronRight className="w-6 h-6 text-white" />
+      </button> */}
+
+      {/* Indicators */}
+      {/* <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-2">
+        {images.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => setCurrentIndex(index)}
+            className={`w-2 h-2 rounded-full transition-all ${
+              index === currentIndex ? 'bg-white w-4' : 'bg-white/50'
+            }`}
+          />
+        ))}
+      </div> */}
+    </div>
+  );
+};
 
 const Index = () => {
   return (
@@ -62,22 +152,20 @@ const Index = () => {
           <h2 className="text-3xl font-mono font-bold text-white mb-12">
             /PRIVATE EQUITY
           </h2>
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 gap-8">
             <div className="p-6 rounded-lg bg-white/10 backdrop-blur">
               <Users className="w-12 h-12 text-white mx-auto mb-4" />
               <h3 className="text-xl font-semibold text-white mb-2">20+ Tech Partners</h3>
               <p className="text-blue-100">With a sector-driven and active corporate development approach, our partners have supported innovative companies such as Klook Travel, Gbike, Zetta (with SK REIT), Anthropic, Scroll, XtalPi, Tornado, Atto Research, Falcon Alpha, Innomatrix, GETLINKS, GOOD CATCH, Commerce2 among many others.</p>
             </div>
             <div className="p-6 rounded-lg bg-white/10 backdrop-blur">
-              <Code className="w-12 h-12 text-white mx-auto mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-2"></h3>
-              <p className="text-blue-100"></p>
+              <ImageCarousel />
             </div>
-            <div className="p-6 rounded-lg bg-white/10 backdrop-blur">
+            {/* <div className="p-6 rounded-lg bg-white/10 backdrop-blur">
               <Globe className="w-12 h-12 text-white mx-auto mb-4" />
               <h3 className="text-xl font-semibold text-white mb-2"></h3>
               <p className="text-blue-100"></p>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>
