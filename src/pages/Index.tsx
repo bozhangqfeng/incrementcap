@@ -150,14 +150,14 @@ const Index = () => {
               <h3 className="text-xl font-semibold text-white mb-2">Tech Partners</h3>
               <p className="text-blue-100">With a sector-driven and active corporate development approach, our partners have supported innovative companies such as Klook Travel, Gbike, Zetta (with SK REIT), Anthropic, Scroll, XtalPi, Tornado, Atto Research, Falcon Alpha, Innomatrix, GETLINKS, GOOD CATCH, Commerce2 among many others.</p>
             </div>
-            <div className="p-6 rounded-lg bg-white/10 backdrop-blur">
-              <ImageCarousel />
+            <div>
+              <div className="p-6 rounded-lg bg-white/10 backdrop-blur">
+                <ImageCarousel />
+              </div>
+              <p className="mt-4 text-lg text-blue-100 text-center">
+                We invest at the genesis of innovation. Strong partnership with founders to build enduring technology businesses.
+              </p>
             </div>
-            {/* <div className="p-6 rounded-lg bg-white/10 backdrop-blur">
-              <Globe className="w-12 h-12 text-white mx-auto mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-2"></h3>
-              <p className="text-blue-100"></p>
-            </div> */}
           </div>
         </div>
       </section>
