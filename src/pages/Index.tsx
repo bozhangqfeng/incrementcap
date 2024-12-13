@@ -99,24 +99,16 @@ const Index = () => {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="pt-32 pb-24 bg-hero-gradient">
+      <section className="pt-32 pb-24 bg-cover bg-center" style={{ backgroundImage: "url('/centerimg.png')" }}>
         <div className="container mx-auto text-center text-white">
           <h1 className="text-5xl md:text-7xl font-mono font-bold mb-6">
             OUR MISSION
           </h1>
           <p className="text-xl md:text-2xl max-w-2xl mx-auto mb-8 text-blue-50">
-          Partnering with exceptional founders and management teams
-          with flexible private equity and debt capital to build
-          enduring technology businesses over time.
+            Partnering with exceptional founders and management teams
+            with flexible private equity and debt capital to build
+            enduring technology businesses over time.
           </p>
-          <div className="flex justify-center space-x-4">
-            <Button size="lg" className="bg-white text-blue-600 hover:bg-blue-50">
-              Contact Us
-            </Button>
-            {/* <Button size="lg" variant="outline" className="text-white border-white bg-transparent hover:bg-white/10">
-              Documentation
-            </Button> */}
-          </div>
         </div>
       </section>
 
