@@ -50,10 +50,9 @@ const ImageCarousel = () => {
       {images.map((image, index) => (
         <div
           key={index}
-          className={`absolute inset-0 p-[7%] transition-transform duration-500 ease-in-out ${
-            index === currentIndex ? 'translate-x-0' :
-            index < currentIndex ? '-translate-x-full' : 'translate-x-full'
-          }`}
+          className={`absolute inset-0 p-[7%] transition-transform duration-500 ease-in-out ${index === currentIndex ? 'translate-x-0' :
+              index < currentIndex ? '-translate-x-full' : 'translate-x-full'
+            }`}
         >
           <img
             src={image}
@@ -151,11 +150,15 @@ const Index = () => {
               <p className="text-blue-100">With a sector-driven and active corporate development approach, our partners have supported innovative companies such as Klook Travel, Gbike, Zetta (with SK REIT), Anthropic, Scroll, XtalPi, Tornado, Atto Research, Falcon Alpha, Innomatrix, GETLINKS, GOOD CATCH, Commerce2 among many others.</p>
             </div>
             <div>
-              <div className="p-6 rounded-lg bg-white/10 backdrop-blur">
+              <div className="p-6 rounded-lg bg-white/10 backdrop-blur mb-4">
                 <ImageCarousel />
               </div>
-              <p className="mt-4 text-lg text-blue-100 text-center">
-                We invest at the genesis of innovation. Strong partnership with founders to build enduring technology businesses.
+              <h3 className="text-xl font-semibold text-white mb-2">Our Funds</h3>
+              <p className="mt-4 text-blue-100 text-left">
+                Genesis: We invest at the genesis of innovation. Strong Partnership with founders to build enduring technology businesses.
+              </p>
+              <p className="mt-4 text-blue-100 text-left">
+                AI Continuum: Growth to late-stage investments across AI spectrum: industry defining LLMs, vertical AI businesses, Blockchain x AI applications, digital infrastructure, robotics, advanced power generation and cooling.
               </p>
             </div>
           </div>
@@ -172,7 +175,7 @@ const Index = () => {
                 Integrating technology private equity, credit, special situations and real estate investment skillsets with data center operator partnerships, the Fund makes senior secured private credit investments in AI data centers and related infrastructure.
               </p>
               <p className="text-lg text-blue-600/80 mb-8">
-              Private credit investments structured with:
+                Private credit investments structured with:
               </p>
               <div className="space-y-4">
                 <div className="flex items-center space-x-3">
@@ -238,9 +241,6 @@ const Index = () => {
                       </li>
                       <li className="flex items-center space-x-2">
                         <span>Strong downside protection while preserving equity upside participation</span>
-                      </li>
-                      <li className="flex items-center space-x-2">
-                        <span className="font-semibold">Targeting 15%+ net returns, of which at least 11% is contractual</span>
                       </li>
                     </ul>
                   </div>
