@@ -1,1 +1,2 @@
 npm run deploy就会部署到gh-pages分支
+npm run dev本地预览

@@ -8,6 +8,7 @@ const ImageCarousel = () => {
   const images = [
     'partner/anthropic.png',
     'partner/attoresearch.png',
+    'partner/codedepot.png',
     'partner/commerce3.png',
     'partner/falconalpha.png',
     'partner/gbike.png',
@@ -15,6 +16,8 @@ const ImageCarousel = () => {
     'partner/goodcatch.png',
     'partner/innomatrix.png',
     'partner/klook.png',
+    'partner/omni.png',
+    'partner/scroll.png',
     'partner/tornado.png',
     'partner/xtalpi.png',
     'partner/zetta.png',
