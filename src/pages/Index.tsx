@@ -149,8 +149,8 @@ const Index = () => {
           <div className="grid md:grid-cols-2 gap-8">
             <div className="p-6 rounded-lg bg-white/10 backdrop-blur">
               <Users className="w-12 h-12 text-white mx-auto mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-2">Tech Partners</h3>
-              <p className="text-blue-100">With a sector-driven and active corporate development approach, our partners have supported innovative companies such as Klook Travel, Gbike, Zetta (with SK REIT), Anthropic, Scroll, XtalPi, Tornado, Atto Research, Falcon Alpha, Innomatrix, GETLINKS, GOOD CATCH, Commerce2 among many others.</p>
+              <h3 className="text-xl font-semibold text-white mb-2">Empowering Visionary Founders from Seed to Global Scale</h3>
+              <p className="text-blue-100">We invest early in technical pioneers and grow alongside founders, scaling regional innovations into worldwide industry leaders. Supporting companies from Seed to IPO — such as Klook, Gbike, XtalPi, OmniML, Conflux, ConsenSys, Scroll, Innomatrix, Tornado, among many others — to build enduring global technology businesses.</p>
             </div>
             <div>
               <div className="p-6 rounded-lg bg-white/10 backdrop-blur mb-4">
@@ -158,10 +158,10 @@ const Index = () => {
               </div>
               <h3 className="text-xl font-semibold text-white mb-2">Our Funds</h3>
               <p className="mt-4 text-blue-100 text-left">
-                Genesis: We invest at the genesis of innovation. Strong Partnership with founders to build enduring technology businesses.
+                Early-Stage Venture: We invest at the genesis of innovation, from pre-seed through Series B. Our SPVs and IMO Funds have made over 150 sector-driven investments spanning AI, digital infrastructure, blockchain and consumer technology.
               </p>
               <p className="mt-4 text-blue-100 text-left">
-                AI Continuum: Growth to late-stage investments across AI spectrum: industry defining LLMs, vertical AI businesses, Blockchain x AI applications, digital infrastructure, robotics, advanced power generation and cooling.
+                Global AI Continuum: Early to growth stage investments across the entire AI value chain where we have unique insights to source and scale outliers: industry defining LLMs, AI tooling and inference, AI-optimized semiconductors, vertical AI businesses, Blockchain x AI applications, digital infrastructure, robotics, advanced power generation and cooling.
               </p>
             </div>
           </div>
@@ -305,7 +305,7 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-sm text-blue-600 text-center md:text-left whitespace-nowrap">
-              © 2024 Increment Capital All rights reserved.
+              © 2025 Increment Capital All rights reserved.
             </p>
             <p className="text-sm text-blue-600 text-center md:text-right whitespace-nowrap">
               Hong Kong | Shanghai | Seoul | Seattle
