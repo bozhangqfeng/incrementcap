@@ -157,11 +157,17 @@ const Index = () => {
                 <ImageCarousel />
               </div>
               <h3 className="text-xl font-semibold text-white mb-2">Our Funds</h3>
-              <p className="mt-4 text-blue-100 text-left">
-                Early-Stage Venture: We invest at the genesis of innovation, from pre-seed through Series B. Our SPVs and IMO Funds have made over 150 sector-driven investments spanning AI, digital infrastructure, blockchain and consumer technology.
+                <p className="mt-4 text-blue-100 text-left font-bold">
+                Early-Stage Venture:
+                </p>
+              <p className="mt-1 text-blue-100 text-left">
+                We invest at the genesis of innovation, from pre-seed through Series B. Our SPVs and IMO Funds have made over 150 sector-driven investments spanning AI, digital infrastructure, blockchain and consumer technology.
               </p>
-              <p className="mt-4 text-blue-100 text-left">
-                Global AI Continuum: Early to growth stage investments across the entire AI value chain where we have unique insights to source and scale outliers: industry defining LLMs, AI tooling and inference, AI-optimized semiconductors, vertical AI businesses, Blockchain x AI applications, digital infrastructure, robotics, advanced power generation and cooling.
+              <p className="mt-4 text-blue-100 text-left font-bold">
+                Global AI Continuum:
+              </p>
+              <p className="mt-1 text-blue-100 text-left">
+                Early to growth stage investments across the entire AI value chain where we have unique insights to source and scale outliers: industry defining LLMs, AI tooling and inference, AI-optimized semiconductors, vertical AI businesses, Blockchain x AI applications, digital infrastructure, robotics, advanced power generation and cooling.
               </p>
             </div>
           </div>
