@@ -6,9 +6,7 @@ import FeatureCard from "@/components/FeatureCard";
 
 const ImageCarousel = () => {
   const images = [
-    'partner/anthropic.png',
     'partner/attoresearch.png',
-    'partner/codedepot.png',
     'partner/commerce3.png',
     'partner/falconalpha.png',
     'partner/gbike.png',
@@ -150,7 +148,7 @@ const Index = () => {
             <div className="p-6 rounded-lg bg-white/10 backdrop-blur">
               <Users className="w-12 h-12 text-white mx-auto mb-4" />
               <h3 className="text-xl font-semibold text-white mb-2">Empowering Visionary Founders from Seed to Global Scale</h3>
-              <p className="text-blue-100">We invest early in technical pioneers and grow alongside founders, scaling regional innovations into worldwide industry leaders. Supporting companies from Seed to IPO — such as Klook, Gbike, XtalPi, OmniML, Conflux, ConsenSys, Scroll, Innomatrix, Tornado, among many others — to build enduring global technology businesses.</p>
+              <p className="text-blue-100">Our partners collectively invest early in technical pioneers and grow alongside founders, scaling regional innovations into worldwide industry leaders. Supporting companies from Seed to IPO — such as Klook, Gbike, XtalPi, OmniML, Conflux, ConsenSys, Scroll, Innomatrix, Tornado, among many others — to build enduring global technology businesses.</p>
             </div>
             <div>
               <div className="p-6 rounded-lg bg-white/10 backdrop-blur mb-4">
@@ -161,7 +159,7 @@ const Index = () => {
                 Early-Stage Venture:
                 </p>
               <p className="mt-1 text-blue-100 text-left">
-                We invest at the genesis of innovation, from pre-seed through Series B. Our SPVs and IMO Funds have made over 150 sector-driven investments spanning AI, digital infrastructure, blockchain and consumer technology.
+                We invest at the genesis of innovation, from pre-seed through Series B. Our SPVs, and together wtih IMO Funds, have made many sector-driven investments spanning AI, digital infrastructure, blockchain and consumer technology.
               </p>
               <p className="mt-4 text-blue-100 text-left font-bold">
                 Global AI Continuum:
@@ -175,7 +173,7 @@ const Index = () => {
       </section>
 
       {/* Integration Section */}
-      <section id="infrastructure" className="py-24 bg-white">
+      {/* <section id="infrastructure" className="py-24 bg-white">
         <div className="container mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
@@ -258,12 +256,12 @@ const Index = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Team Section */}
-      <section id="team" className="py-24 bg-blue-600">
+      <section id="team" className="py-24 bg-white">
         <div className="container mx-auto text-center">
-          <h2 className="text-3xl font-mono font-bold mb-12 text-white">/TEAM</h2>
+          <h2 className="text-3xl font-mono font-bold mb-12 text-blue-600">/TEAM</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="p-6">
               <img
@@ -271,8 +269,8 @@ const Index = () => {
                 alt="Worldwide"
                 className="w-full h-48 object-cover rounded-lg mb-4"
               />
-              <h3 className="text-lg font-semibold mb-2 text-white">Worldwide</h3>
-              <p className="text-blue-100">Operating from Hong Kong, Seoul, Shanghai and Seattle</p>
+              <h3 className="text-lg font-semibold mb-2 text-blue-600">Worldwide</h3>
+              <p className="text-muted-foreground text-sm">Operating from Hong Kong, Seoul, Shanghai and Seattle</p>
             </div>
             <div className="p-6">
               <img
@@ -280,8 +278,8 @@ const Index = () => {
                 alt="Skilled"
                 className="w-full h-48 object-cover rounded-lg mb-4"
               />
-              <h3 className="text-lg font-semibold mb-2 text-white">Skilled</h3>
-              <p className="text-blue-100">Strong technical expertise (Google, Microsoft, Amazon, AMD)</p>
+              <h3 className="text-lg font-semibold mb-2 text-blue-600">Skilled</h3>
+              <p className="text-muted-foreground text-sm">Strong technical expertise (Google, Microsoft, Amazon, AMD)</p>
             </div>
             <div className="p-6">
               <img
@@ -289,8 +287,8 @@ const Index = () => {
                 alt="Experienced"
                 className="w-full h-48 object-cover rounded-lg mb-4"
               />
-              <h3 className="text-lg font-semibold mb-2 text-white">World Class Investment Experience</h3>
-              <p className="text-blue-100">Unique blend of public and private investment experience
+              <h3 className="text-lg font-semibold mb-2 text-blue-600">World Class Investment Experience</h3>
+              <p className="text-muted-foreground text-sm">Unique blend of public and private investment experience
                 at world class organizations including Warburg Pincus, Clearlake Capital, Apax Partners, Capital Group, Goldman Sachs, Credit Suisse, UBS and JPMorgan.</p>
             </div>
             <div className="p-6">
@@ -299,21 +297,21 @@ const Index = () => {
                 alt="Extensive"
                 className="w-full h-48 object-cover roun</div>ded-lg mb-4"
               />
-              <h3 className="text-lg font-semibold mb-2 text-white">Multi Asset Class Expertise</h3>
-              <p className="text-blue-100">Invest in early-stage venture, growth equity, buyouts, PIPEs, special situations credit, operational turnarounds, spin-offs and restructurings</p>
+              <h3 className="text-lg font-semibold mb-2 text-blue-600">Multi Asset Class Expertise</h3>
+              <p className="text-muted-foreground text-sm">Invest in early-stage venture, growth equity, buyouts, PIPEs, special situations credit, operational turnarounds, spin-offs and restructurings</p>
             </div>
           </div>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="relative bg-white border-t border-blue-100 py-12 w-full flex-shrink-0">
+      <footer className="relative bg-blue-600 border-t border-blue-100 py-12 w-full flex-shrink-0">
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-sm text-blue-600 text-center md:text-left whitespace-nowrap">
+            <p className="text-sm text-white text-center md:text-left whitespace-nowrap">
               © 2025 Increment Capital All rights reserved.
             </p>
-            <p className="text-sm text-blue-600 text-center md:text-right whitespace-nowrap">
+            <p className="text-sm text-white text-center md:text-right whitespace-nowrap">
               Hong Kong | Shanghai | Seoul | Seattle
             </p>
           </div>

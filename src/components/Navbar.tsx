@@ -37,12 +37,12 @@ const Navbar = () => {
           >
             Private Equity
           </button>
-          <button
+          {/* <button
             onClick={() => scrollToSection('infrastructure')}
             className="text-sm font-medium hover:text-primary"
           >
             Private Credit
-          </button>
+          </button> */}
           <button
             onClick={() => scrollToSection('team')}
             className="text-sm font-medium hover:text-primary"
